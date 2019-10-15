@@ -1,0 +1,8 @@
+node_modules/
+
+.DS_Store
+
+.env
+
+#ビルドしたアプリケーションのあるフォルダは除外
+ReactionMemo-darwin-x64/
