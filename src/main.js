@@ -37,9 +37,9 @@ app.on('window-all-closed', () => {
   }
 });
 //アプリケーションがアクティブになった時(MacだとDockがクリックされた時)
-app.on('active', () => {
+app.on('activate', () => {
   //メインウィンドウが消えている場合は再度メインウィンドウを作成する
   if (mainWindow === null){
     createWindow();
   }
-})
+});
