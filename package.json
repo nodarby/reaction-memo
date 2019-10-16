@@ -1,5 +1,5 @@
 {
-  "scripts":{
+  "scripts": {
     "start": "electron ./src",
     "build-mac": "electron-packager src ReactionMemo --platform=darwin --arch=x64 --electron-version=v6.0.12 --overwrite "
   },
