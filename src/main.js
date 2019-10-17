@@ -18,7 +18,7 @@ function createWindow(){
   mainWindow.loadFile('index.html');
 
   //デベロッパーツールの起動
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 
   //メインウィンドウが閉じられた時の処理
   mainWindow.on('closed',()=>{
