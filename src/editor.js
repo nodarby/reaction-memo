@@ -33,14 +33,18 @@ function onLoad(){
         saveFile();
     })
 
+    document.getElementById("canvas").style.display="none";
+
     document.onkeydown =
         function (e) {
             if (((e.ctrlKey && !e.metaKey) || (!e.ctrlKey && e.metaKey)) && e.keyCode === 83) {
-                celebrate();
-                document.getElementById( 'sound-file' ).play();
+                saveFile();
             }
-        }
+        };
 
+    document.getElementById("text_area").addEventListener('click', ()=>{
+        document.getElementById("canvas").style.display="none";
+    })
 
 }
 
@@ -94,22 +98,13 @@ function saveFile() {
         return;
     }
 
-    const win = BrowserWindow.getFocusedWindow();
+    const data = editor.getValue();
+    writeFile(currentPath, data);
 
-    dialog.showMessageBox(win, {
-        title: 'ファイルの保存を行います。',
-        type: 'info',
-        buttons: ['OK', 'Cancel'],
-        detail: '本当に保存しますか？'
-    },
-        //メッセージボックスが閉じられた後
-        (response) => {
-            if (response === 0){
-                const data = editor.getValue();
-                writeFile(currentPath, data);
-            }
-        }
-    )
+    document.getElementById("canvas").style.display="block";
+    celebrate();
+    document.getElementById( 'sound-file' ).play();
+
 }
 
 //ファイルの書き込み

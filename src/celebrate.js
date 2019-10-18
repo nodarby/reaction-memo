@@ -99,4 +99,6 @@ function celebrate() {
 
 //animation loop
     setInterval(draw, 20);
+
+    return false;
 }
