@@ -1,4 +1,10 @@
+//拝借した紙吹雪スクリプト
+
+var carryout;
+
+
 function celebrate() {
+
 //canvas init
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -97,8 +103,15 @@ function celebrate() {
         }
     }
 
-//animation loop
-    setInterval(draw, 20);
 
-    return false;
+//animation loop
+    carryout = setInterval(draw, 20);
+
+
+
+
+}
+
+function stopDraw() {
+    clearInterval(carryout);
 }

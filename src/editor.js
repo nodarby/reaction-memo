@@ -42,8 +42,9 @@ function onLoad(){
             }
         };
 
-    document.getElementById("text_area").addEventListener('click', ()=>{
+    document.getElementById("canvas").addEventListener('click', ()=>{
         document.getElementById("canvas").style.display="none";
+        stopDraw();
     })
 
 }
