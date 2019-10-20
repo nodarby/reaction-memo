@@ -14,7 +14,8 @@ body {
 /** ヘッダーが34px、フッターが20px */
 #input_area {
     padding: 34px 0px 20px 0px;
-    height: 100%;
+    height: 80%;
+    z-index: 1;
 }
 
 #input_txt {
@@ -52,4 +53,34 @@ body {
     top:0;
     left:0;
     z-index: 1000;
+}
+
+.balloon1 {
+    position: relative;
+    display: inline-block;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #e0edff;
+    z-index: 1000;
+    border-radius: 15px;
+    height : 15%;
+    width : 100%;
+}
+
+.balloon1:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top: 15px solid #e0edff;
+}
+
+.balloon1 p {
+    margin: 0;
+    padding: 0;
 }
