@@ -49,10 +49,6 @@ function onLoad(){
 
 }
 
-window.onload = function(){
-    //起動完了後の処理
-
-}
 
 //ファイルを開きます
 function openLoadFile(){
