@@ -18,7 +18,7 @@ function createWindow(){
   mainWindow.loadFile('index.html');
 
   //デベロッパーツールの起動
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 
   //メインウィンドウが閉じられた時の処理
   mainWindow.on('closed',()=>{
@@ -37,9 +37,9 @@ app.on('window-all-closed', () => {
   }
 });
 //アプリケーションがアクティブになった時(MacだとDockがクリックされた時)
-app.on('active', () => {
+app.on('activate', () => {
   //メインウィンドウが消えている場合は再度メインウィンドウを作成する
   if (mainWindow === null){
     createWindow();
   }
-})
+});
