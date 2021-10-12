@@ -4,7 +4,7 @@
     "build-mac": "electron-packager src ReactionMemo --platform=darwin --arch=x64 --electron-version=v6.0.12 --overwrite "
   },
   "devDependencies": {
-    "electron": "^4.1.4",
+    "electron": "^11.5.0",
     "electron-packager": "^13.1.1"
   },
   "private": true
